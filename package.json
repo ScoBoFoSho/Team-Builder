@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/ScoBoFoSho/Team-Builder/issues"
   },
-  "homepage": "https://github.com/ScoBoFoSho/Team-Builder#readme"
+  "homepage": "https://github.com/ScoBoFoSho/Team-Builder#readme",
+  "dependencies": {
+    "inquirer": "^9.1.0"
+  }
 }
