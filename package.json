@@ -26,5 +26,8 @@
   "homepage": "https://github.com/ScoBoFoSho/Team-Builder#readme",
   "dependencies": {
     "inquirer": "^9.1.0"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
   }
 }
