@@ -1,0 +1,27 @@
+{
+  "name": "team-builder",
+  "version": "1.0.0",
+  "description": "generate HTML for a web page with employee information",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScoBoFoSho/Team-Builder.git"
+  },
+  "keywords": [
+    "Generate",
+    "Jest",
+    "OOP"
+  ],
+  "author": "Francisco Ferre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ScoBoFoSho/Team-Builder/issues"
+  },
+  "homepage": "https://github.com/ScoBoFoSho/Team-Builder#readme"
+}
