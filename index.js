@@ -4,11 +4,8 @@ const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 const fs = require("fs");
 const path = require("path");
-const generateHTML = require("./src/framework.js");
-const OUTPUT_DIR = path.resolve(dist, "html.index");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
+// const generateHTML = require("./src/framework.js");
 const teamMembers = [];
-
 const promptManager = () => {
   return inquirer
     .prompt([
@@ -222,11 +219,30 @@ const buildTeam = () => {
     Team has been built!
     ======================
     `);
+  console.log(teamMembers);
+  var htmlString = `
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Manager Heading
+</body>
+</html>`;
 
-  if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR);
-  }
-  fs.writeFileSync(outputPath, generateHTML(teamMembers), "utf-8");
+  fs.writeFile("./dist/index.html", htmlString, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(
+        "index.html file was written into the ./dist/index.html folder"
+      );
+    }
+  });
 };
 
 promptManager();
