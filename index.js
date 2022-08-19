@@ -4,7 +4,7 @@ const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 const fs = require("fs");
 const path = require("path");
-// const generateHTML = require("./src/framework.js");
+const generateHTML = require("./src/framework.js");
 const teamMembers = [];
 const promptManager = () => {
   return inquirer
@@ -45,7 +45,7 @@ const promptManager = () => {
       },
     ])
     .then((answers) => {
-      console.log(answers);
+      // console.log(answers);
       const manager = new Manager(
         answers.name,
         answers.id,
@@ -220,21 +220,10 @@ const buildTeam = () => {
     ======================
     `);
   console.log(teamMembers);
-  var htmlString = `
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Manager Heading
-</body>
-</html>`;
 
-  fs.writeFile("./dist/index.html", htmlString, (err) => {
+  const myHtmlTemplate = generateHTML(teamMembers);
+
+  fs.writeFile("./dist/index.html", myHtmlTemplate, (err) => {
     if (err) {
       console.log(err);
     } else {
