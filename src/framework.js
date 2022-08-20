@@ -49,7 +49,7 @@ const generateEngineer = (engineer) => {
 <div class="card" style="width: 18rem;">
     <div class="card-header">
     ${engineer.name} <br/>
-    <i class=fas fa-glasses"></i>Engineer</div>
+    <i class="fas fa-glasses"></i>Engineer</div>
     <ul class="list-group list-group-flush">
     <li class="list-group-item">ID: ${engineer.id}</li>
     <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
@@ -103,8 +103,10 @@ module.exports = (teamArray) => {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/1e0a13a89f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../dist/style.css" />
+        <title> The Work Team </title>
     </head>
     <body>
         <header>
